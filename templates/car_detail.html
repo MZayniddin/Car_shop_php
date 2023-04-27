@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!--<form action="" method="post">-->
+
+<!--    Mashina nomini kiriting <input type="text">-->
+<!--    <input type="submit" value="Qidirish">-->
+<!--</form>-->
+
+
+<table>
+    <tr>
+        <td>ID</td>
+        <td>Model</td>
+        <td>Description</td>
+        <td>Price</td>
+        <td></td>
+    </tr>
+
+    {% for item in car %}
+    <tr>
+        <td style="padding-right: 100px">{{item['id']}}</td>
+        <td style="padding-right: 100px">{{item['model_name']}}</td>
+        <td style="padding-right: 100px">{{item['description']}}</td>
+        <td style="padding-right: 100px">{{item['price']}}</td>
+        <!--        <td> <a href='talaba_show.php?id={{talaba.id}}'>Show</a> </td>-->
+        <!--        <td> <a href='talaba_edit.php?id={{talaba.id}}'>Edit</a> </td>-->
+    </tr>
+    {% endfor %}
+
+</table>
+
+
+{% endblock %}
