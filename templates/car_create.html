@@ -1,10 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block content %}
+
+<form action="" method="post">
+
+    Qidirish: <input type="text">
+    <input type="submit" value="Qidirish">
+</form>
+
+<form method="POST" action="../car_create.php">
+    <label for="model">Model: </label>
+    <input type="text" name="model" id="model">
+  
+    <label for="description">Description: </label>
+    <textarea name="description" id="description"></textarea>
+  
+    <label for="price">Price:</label>
+    <input type="number" name="price" id="price">
+
+    <label for="brand__name">brand name: </label>
+    <textarea name="brand__name" id="brand__name"></textarea>
+
+    <label for="model">model: </label>
+    <textarea name="model" id="model"></textarea>
+
+    <label for="color__name">color name: </label>
+    <textarea name="color__name" id="color__name"></textarea>
+
+    <label for="body__name">body name: </label>
+    <textarea name="body__name" id="body__name"></textarea>
+
+    <label for="transmission__type">transmission type: </label>
+    <textarea name="transmission__type" id="transmission__type"></textarea>
+
+    <label for="max_speed">max speed: </label>
+    <input type="number" name="max_speed" id="max_speed"></input>
+
+    <label>
+        <input type="radio" name="is_sold" value="true">
+        True
+      </label>
+      
+      <label>
+        <input type="radio" name="is_sold" value="false">
+        False
+    </label>
+
+    <label>
+        <input type="radio" name="is_public" value="true">
+        True
+    </label>
+      
+    <label>
+        <input type="radio" name="is_public" value="false">
+        False
+    </label>
+
+    <label for="engine">max speed: </label>
+    <input type="number" name="engine" id="engine"></input>
+
+    <label for="year">max speed: </label>
+    <input type="number" name="year" id="year"></input>
+
+    <label for="transmission__type">transmission type: </label>
+    <textarea name="transmission__type" id="transmission__type"></textarea>
+
+    <label for="created_by__fullname">created by fullname: </label>
+    <textarea name="created_by__fullname" id="created_by__fullname"></textarea>
+  
+    <label for="created_by__username">created by username: </label>
+    <textarea name="created_by__username" id="created_by__username"></textarea>
+  
+    <label for="created_by__age">created by age: </label>
+    <textarea name="created_by__age" id="created_by__age"></textarea>
+
+    <button type="submit">Submit</button>
+</form>  
+
+
+{% endblock %}
