@@ -23,10 +23,10 @@ if (pg_num_rows($created_by_result) > 0) {
     $created_by_id = pg_fetch_assoc($created_by_result)['id'];
 } else {
     // Image does not exist, create it
-    $created_by_query = "INSERT INTO Image (fullname, username, age) VALUES ('$created_by__fullname', '$created_by__username', '$created_by__age')";
-    $created_by_result = pg_query($dbconn3, $created_by_query);
+    $created_by_insert_query = "INSERT INTO Image (fullname, username, age) VALUES ('$created_by__fullname', '$created_by__username', '$created_by__age')";
+    $created_by_insert_result = pg_query($dbconn3, $created_by_query);
 
-    if ($image_insert_result) {
+    if ($created_by_insert_result) {
         // Image created successfully, get its ID
         $created_by_id = pg_fetch_assoc(pg_query($dbconn3, "SELECT LASTVAL()"))['lastval'];
     } else {
@@ -80,7 +80,7 @@ if (pg_num_rows($model_result) > 0) {
 } else {
     // Category does not exist, create it
     $model_insert_query = "INSERT INTO Model (name, brand_id) VALUES ('$model', '$brand_id')";
-    $model_insert_result = pg_query($dbconn3, $brand_insert_query);
+    $model_insert_result = pg_query($dbconn3, $model_insert_query);
 
     if ($model_insert_result) {
         // Category created successfully, get its ID

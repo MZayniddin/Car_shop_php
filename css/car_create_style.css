@@ -1,0 +1,75 @@
+form {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="float"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.search-btn {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button[type="submit"],
+button[type="reset"] {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button[type="reset"] {
+  background-color: #f44336;
+}
+
+button[type="submit"]:hover,
+button[type="reset"]:hover {
+  background-color: #3e8e41;
+}
+
+button[type="submit"]:focus,
+button[type="reset"]:focus {
+  outline: none;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
