@@ -2,12 +2,12 @@
 
 {% block content %}
 
-<form action="" method="post">
-
-    Qidirish: <input type="text">
-    <input type="submit" value="Qidirish">
+<form action="/search" method="GET">
+    <div class="search-container">
+        <input id="search_term" type="text" placeholder="Search...">
+        <button type="submit" class="search-btn">Search</button>        
+    </div>      
 </form>
-
 
 <table>
     <tr>
@@ -22,8 +22,6 @@
         <td style="padding-right: 100px">{{car['model_name']}}</td>
         <td style="padding-right: 100px">{{car['description']}}</td>
         <td style="padding-right: 100px">{{car['price']}}</td>
-<!--        <td> <a href='talaba_show.php?id={{talaba.id}}'>Show</a> </td>-->
-<!--        <td> <a href='talaba_edit.php?id={{talaba.id}}'>Edit</a> </td>-->
     </tr>
     {% endfor %}
 
